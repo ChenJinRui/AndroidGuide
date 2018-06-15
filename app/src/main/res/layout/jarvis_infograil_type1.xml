@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_sv"
+    android:layout_width="260px"
+    android:layout_height="260px"
+    android:layout_marginTop="@dimen/_30px"
+    android:clipChildren="false">
+
+    <ImageView
+        android:id="@+id/img_content"
+        android:layout_width="260px"
+        android:layout_height="260px"
+        android:src="@drawable/ic_sign_in"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/tv_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="#CF224E"
+        android:paddingLeft="@dimen/_12px"
+        android:paddingRight="@dimen/_12px"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/_28px"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/img_focus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_select_bg"
+        android:visibility="invisible" />
+</RelativeLayout>

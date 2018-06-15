@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="InfoGrailItem">
+
+        <attr name="img_background" format="reference"/>
+        <attr name="tv_sum" format="string"/>
+        <attr name="pkgName" format="string"/>
+        <attr name="className" format="string"/>
+    </declare-styleable>
+</resources>

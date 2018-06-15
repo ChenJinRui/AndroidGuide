@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidGuide</string>
+    <string name="todo_text">待办事项</string>
 </resources>

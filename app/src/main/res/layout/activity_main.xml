@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<com.soul.androidguide.views.SmoothScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_sv"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.soul.androidguide.MainActivity">
+    android:background="@drawable/jarvis_todo_main_bg"
+    android:clipChildren="false">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/pading_98px"
+            android:paddingLeft="@dimen/pading_130px"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/todo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/todo_text"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/title_size"
+                />
+            <com.soul.androidguide.views.CustomRecyclerView
+                android:id="@+id/id_recycler_view"
+                android:layout_width="@dimen/_1420"
+                android:layout_height="wrap_content"
+                android:focusable="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/todo_text"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/title_size"
+                />
+            <com.soul.androidguide.views.CustomRecyclerView
+                android:id="@+id/id_recycler_view2"
+                android:layout_width="@dimen/_1420"
+                android:layout_height="wrap_content"
+                android:focusable="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/todo_text"
+                android:textColor="@color/title_color"
+                android:textSize="@dimen/title_size"
+                />
+            <com.soul.androidguide.views.CustomRecyclerView
+                android:id="@+id/id_recycler_view3"
+                android:layout_width="@dimen/_1420"
+                android:layout_height="wrap_content"
+                android:focusable="true"/>
+        </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+</com.soul.androidguide.views.SmoothScrollView>
