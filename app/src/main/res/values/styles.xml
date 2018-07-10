@@ -8,4 +8,22 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="RelativeLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:visibility">visible</item>
+    </style>
+    <style name="jarvis_txt_style">
+        <item name="android:gravity">left</item>
+        <item name="android:paddingBottom">@dimen/_15px</item>
+        <item name="android:paddingLeft">@dimen/_26px</item>
+        <item name="android:paddingRight">@dimen/_26px</item>
+        <item name="android:paddingTop">@dimen/_15px</item>
+    </style>
+    <style name="FeelyouWindowAnimTheme" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_from_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_from_left</item>
+    </style>
 </resources>

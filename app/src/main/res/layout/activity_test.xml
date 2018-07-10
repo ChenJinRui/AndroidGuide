@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.soul.androidguide.views.SmoothScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:infograilitem="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jarvis_todo_main_bg"
+    android:clipChildren="true">
+    <RelativeLayout
+        android:id="@+id/info_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/_130px"
+        android:paddingTop="@dimen/_248px"
+        >
+
+
+
+        <RelativeLayout
+            android:id="@+id/info_todo_layout"
+            style="@style/RelativeLayoutStyle"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_36px"
+                android:textColor="@color/title_color"
+                android:text="@string/text_todo"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/info_recommendation_layout"
+            style="@style/RelativeLayoutStyle"
+            android:layout_below="@id/info_todo_layout"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_36px"
+                android:textColor="@color/title_color"
+                android:text="@string/text_recommendation"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/info_visible_layout"
+            style="@style/RelativeLayoutStyle"
+            android:layout_below="@id/info_recommendation_layout"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_36px"
+                android:textColor="@color/title_color"
+                android:text="@string/text_visible"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/info_smart_layout"
+            style="@style/RelativeLayoutStyle"
+            android:layout_below="@id/info_visible_layout"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_36px"
+                android:textColor="@color/title_color"
+                android:text="@string/text_smart"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</com.soul.androidguide.views.SmoothScrollView>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ysten.jarvisclient.ui.widget.SmoothScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_sv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jarvis_todo_main_bg"
+    android:focusable="false"
+    android:clipChildren="false">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_210px"
+        android:layout_marginRight="@dimen/_210px"
+        android:clipChildren="false">
+
+        <RelativeLayout
+            android:id="@+id/content_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/_160px">
+
+            <com.ysten.jarvisclient.ui.widget.CircleImageView
+                android:id='@+id/content_iv'
+                android:layout_width="@dimen/_133px"
+                android:layout_height="@dimen/_133px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/jarvis_headimg"/>
+
+            <com.ysten.jarvisclient.ui.customview.CusToDoTipBar
+                android:id="@+id/content_tipbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_20px"
+                android:layout_toRightOf="@id/content_iv" />
+
+        </RelativeLayout>
+
+
+        <com.ysten.jarvisclient.ui.customview.CusToDoList
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/content_title_layout"
+            android:layout_marginTop="@dimen/_32px"
+            android:layout_marginBottom="@dimen/_100px"
+            android:focusable="true"
+            android:clipChildren="false"/>
+    </RelativeLayout>
+</com.ysten.jarvisclient.ui.widget.SmoothScrollView>

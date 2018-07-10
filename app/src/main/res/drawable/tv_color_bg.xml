@@ -3,11 +3,11 @@
     <item>
         <shape android:shape="rectangle">
             <!--设置渐变色-->
+            <gradient
+                android:angle="-180"
+                android:startColor="#66000000"
+                android:endColor="#CC000000"/>
 
-            <stroke
-                android:width="@dimen/_3px"
-                android:color="#ffffff"
-                />
         </shape>
     </item>
 

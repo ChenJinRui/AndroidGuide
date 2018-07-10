@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_root"
+    android:layout_width="@dimen/_265px"
+    android:layout_height="@dimen/_265px"
+    android:padding="@dimen/_5px"
+    >
+
+    <ImageView
+        android:id="@+id/content_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#00000000"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:id="@+id/content_lockimg"
+        android:layout_width="@dimen/_40px"
+        android:layout_height="@dimen/_40px"
+        android:scaleType="fitXY"
+
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/content_pop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/_12px"
+        android:textColor="#ffffffff"
+
+        android:textSize="@dimen/_28px"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/content_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/_190px"
+        android:textColor="#eeffffff"
+        android:textSize="@dimen/_28px"
+        android:gravity="center"/>
+
+</RelativeLayout>

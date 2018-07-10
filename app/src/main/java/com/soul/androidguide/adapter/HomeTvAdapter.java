@@ -37,6 +37,12 @@ public class HomeTvAdapter extends CustomRecyclerView.CustomAdapter<Integer> {
     protected void onSetItemData(RecyclerView.ViewHolder viewHolder, int position) {
         GalleryViewHolder holder = (GalleryViewHolder) viewHolder;
         holder.tv.setText("" + position);
+        if(0 == position%2){
+            holder.iv.setImageResource(R.drawable.ic_interaction_one);
+        }else{
+            holder.iv.setImageResource(R.drawable.ic_sign_in);
+        }
+
     }
 
 

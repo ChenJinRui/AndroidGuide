@@ -17,7 +17,11 @@ android {
         }
     }
 }
-
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
@@ -26,4 +30,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    compile 'com.alibaba:fastjson:1.2.47'
+    compile 'com.alibaba:fastjson:1.1.68.android'
+    compile(name: 'terminallib-release', ext: 'aar')
+    compile 'jp.wasabeef:glide-transformations:2.0.2'
 }

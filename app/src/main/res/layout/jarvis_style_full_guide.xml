@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jarvis_fullguide_bg">
+
+    <TextView
+        android:id="@+id/content_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#ffFFFFFF"
+        android:textSize="@dimen/_48px"
+        android:layout_marginTop="@dimen/_100px"
+        android:layout_marginLeft="@dimen/_100px"/>
+
+    <TextView
+        android:id="@+id/content_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/content_title"
+        android:layout_alignParentRight="true"
+        android:textColor="#9BFFFFFF"
+        android:textSize="@dimen/_28px"
+        android:layout_marginRight="@dimen/_100px"
+        android:text="上下键查看全部技能"/>
+    <View
+        android:id="@+id/content_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2px"
+        android:layout_below="@id/content_title"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/_100px"
+        android:layout_marginRight="@dimen/_100px"
+        android:layout_marginTop="@dimen/_30px"
+        android:background="#66ffffff"/>
+
+    <ScrollView
+        android:id="@+id/content_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_100px"
+        android:layout_marginRight="@dimen/_100px"
+        android:layout_below="@id/content_line"
+        android:scrollbars="none">
+
+        <com.ysten.jarvisclient.ui.customview.CusFullGuideList
+            android:id="@+id/content_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40px"
+            android:clipChildren="false"/>
+
+    </ScrollView>
+</RelativeLayout>

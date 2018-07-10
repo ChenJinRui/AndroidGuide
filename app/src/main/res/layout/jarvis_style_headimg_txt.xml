@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.soul.androidguide.views.CircleImageView
+        android:id="@+id/content_iv"
+        android:layout_width="@dimen/_70px"
+        android:layout_height="@dimen/_70px"
+        android:layout_marginLeft="@dimen/_30px"
+        android:layout_centerVertical="true"
+        android:minHeight="@dimen/_90px"/>
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/content_iv"
+        android:layout_centerVertical="true"
+        android:gravity="left"
+        android:background="#00000000"
+        android:textColor="#ff0D3063"
+        android:textSize="@dimen/_32px"
+        style="@style/jarvis_txt_style"/>
+</RelativeLayout>

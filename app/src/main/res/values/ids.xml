@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="todoSignName" type="id">Name_1</item>
+    <item name="todoWeatherName" type="id">Name_2</item>
+    <item name="todoOrderName" type="id">Name_3</item>
+    <item name="todoMemberName" type="id">Name_4</item>
+    <item name="todoCouponName" type="id">Name_5</item>
+    <item name="recomExclusiveName" type="id">Name_6</item>
+    <item name="recomSubscribeName" type="id">Name_7</item>
+    <item name="visibleRecommendName" type="id">Name_8</item>
+    <item name="visibleShareVideoName" type="id">Name_9</item>
+    <item name="visibleShareImgName" type="id">Name_10</item>
+    <item name="visibleCallName" type="id">Name_11</item>
+    <item name="smartFaceName" type="id">Name_12</item>
+    <item name="smartVoicePrintName" type="id">Name_13</item>
+    <item name="smartVoiceName" type="id">Name_14</item>
+
+</resources>

@@ -3,12 +3,14 @@
     <item>
         <shape android:shape="rectangle">
             <!--设置渐变色-->
-
+            <corners
+                android:bottomLeftRadius="@dimen/_4px"
+                android:bottomRightRadius="@dimen/_4px"
+                android:topLeftRadius="@dimen/_4px"
+                android:topRightRadius="@dimen/_4px"/>
             <stroke
                 android:width="@dimen/_3px"
-                android:color="#ffffff"
-                />
+                android:color="#ffffff" />
         </shape>
     </item>
-
 </layer-list>

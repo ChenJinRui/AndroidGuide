@@ -1,8 +1,8 @@
 package com.soul.androidguide;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
@@ -15,7 +15,7 @@ import com.soul.androidguide.views.CustomRecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private Context mContext;
 
@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.bottom_in,R.anim.bottom_silent);
         setContentView(R.layout.activity_main);
+        overridePendingTransition(R.anim.bottom_in,R.anim.bottom_silent);
         initView();
     }
 
@@ -53,11 +55,11 @@ public class MainActivity extends AppCompatActivity {
         mLayoutManager.setAutoMeasureEnabled(true);
         mLayoutManager2 = new StaggeredGridLayoutManager(LINE_NUM, StaggeredGridLayoutManager.VERTICAL);
         mLayoutManager2.setAutoMeasureEnabled(true);
-        mLayoutManager3 = new StaggeredGridLayoutManager(LINE_NUM, StaggeredGridLayoutManager.VERTICAL);
-        mLayoutManager3.setAutoMeasureEnabled(true);
+//        mLayoutManager3 = new StaggeredGridLayoutManager(LINE_NUM, StaggeredGridLayoutManager.VERTICAL);
+//        mLayoutManager3.setAutoMeasureEnabled(true);
         mRecyclerView.setLayoutManager(mLayoutManager);
         mRecyclerView2.setLayoutManager(mLayoutManager2);
-        mRecyclerView3.setLayoutManager(mLayoutManager3);
+//        mRecyclerView3.setLayoutManager(mLayoutManager3);
 
         initData();
         mAdapter = new HomeTvAdapter(this, mData);
@@ -65,13 +67,16 @@ public class MainActivity extends AppCompatActivity {
         mAdapter3 = new HomeTvAdapter(this, mData);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView2.setAdapter(mAdapter2);
-        mRecyclerView3.setAdapter(mAdapter3);
+//        mRecyclerView3.setAdapter(mAdapter3);
         mAdapter.setOnItemClickListener(new MyOnItemClickListener());
         mAdapter2.setOnItemClickListener(new MyOnItemClickListener());
-        mAdapter3.setOnItemClickListener(new MyOnItemClickListener());
+//        mAdapter3.setOnItemClickListener(new MyOnItemClickListener());
         mRecyclerView.setOnScrollListener(new MyOnScrollListener());
         mRecyclerView2.setOnScrollListener(new MyOnScrollListener());
-        mRecyclerView3.setOnScrollListener(new MyOnScrollListener());
+//        mRecyclerView3.setOnScrollListener(new MyOnScrollListener());
+//        Intent mIntent = new Intent(this,TestActivity.class);
+//        startActivity(mIntent);
+//        overridePendingTransition(R.anim.start_down,0);
     }
 
     private void initData() {
@@ -102,5 +107,18 @@ public class MainActivity extends AppCompatActivity {
             super.onScrolled(recyclerView, dx, dy);
             //在滚动的时候处理箭头的状态
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        finish();
+        overridePendingTransition(0, R.anim.start_down);
+    }
+
+    @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.anim.bottom_silent,R.anim.bottom_out);
     }
 }
