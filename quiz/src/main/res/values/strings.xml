@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="btn_true">TRUE</string>
+    <string name="btn_false">FALSE</string>
+    <string name="toast_correct">正确</string>
+    <string name="toast_error">错误</string>
+</resources>
