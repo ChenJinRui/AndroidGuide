@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#A000"
+                android:endColor="#A000"
+                android:centerColor="#6000"
+                />
+            <padding
+                android:top="@dimen/toast_padding_vertical"
+                android:bottom="@dimen/toast_padding_vertical"
+                android:right="@dimen/toast_padding_horizontal"
+                android:left="@dimen/toast_padding_horizontal"
+                />
+            <corners
+                android:bottomLeftRadius="@dimen/round_bg_size"
+                android:bottomRightRadius="@dimen/round_bg_size"
+                android:topLeftRadius="@dimen/round_bg_size"
+                android:topRightRadius="@dimen/round_bg_size"/>
+            <stroke
+                android:width="@dimen/round_line_size"
+                android:color="#0000" />
+        </shape>
+    </item>
+</layer-list>

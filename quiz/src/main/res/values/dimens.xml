@@ -4,4 +4,8 @@
     <dimen name="btn_w">100dp</dimen>
     <dimen name="margin_20_dp">20dp</dimen>
     <dimen name="txt_size_btn">18sp</dimen>
+    <dimen name="round_bg_size">5dp</dimen>
+    <dimen name="round_line_size">1dp</dimen>
+    <dimen name="toast_padding_vertical">10dp</dimen>
+    <dimen name="toast_padding_horizontal">20dp</dimen>
 </resources>

@@ -41,11 +41,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_true:
-                showToast(R.string.toast_correct);
-                examines();
+                examines(true);
                 break;
             case R.id.btn_false:
-                showToast(R.string.toast_error);
+                examines(false);
                 break;
             default:
                 break;
@@ -53,7 +52,12 @@ public class MainActivity extends Activity implements View.OnClickListener{
         }
     }
 
-    private void examines() {
+    private void examines(boolean answer) {
+        if(answer){
+            showToast(R.string.toast_correct);
+        }else{
+            showToast(R.string.toast_error);
+        }
 
     }
     private static Toast mToast;
@@ -61,14 +65,28 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private void showToast(int resId){
 
         if(mToast == null){
-            mToast = new Toast(MainActivity.this);
-            View toastView = View.inflate(MainActivity.this,R.layout.toast_layout,null);
-            mToast.setGravity(Gravity.TOP,0,0);
+            mToast = new Toast(mContext);
+            View toastView = View.inflate(mContext,R.layout.toast_layout,null);
+            mToast.setGravity(Gravity.TOP,0,20);
             mToast.setView(toastView);
             mToast.setDuration(Toast.LENGTH_SHORT);
             toast_content = toastView.findViewById(R.id.tv_toast_content);
         }
         
+        toast_content.setText(resId);
+        mToast.show();
+    }
+    private void showToast(String resId){
+
+        if(mToast == null){
+            mToast = new Toast(mContext);
+            View toastView = View.inflate(mContext,R.layout.toast_layout,null);
+            mToast.setGravity(Gravity.TOP,0,20);
+            mToast.setView(toastView);
+            mToast.setDuration(Toast.LENGTH_SHORT);
+            toast_content = toastView.findViewById(R.id.tv_toast_content);
+        }
+
         toast_content.setText(resId);
         mToast.show();
     }
